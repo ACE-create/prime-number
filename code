@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b;
+    int flag=0;
+    cout<<"enter the starting and ending value to find prime number in between"<<endl;
+    cin>>a>>b;
+    for(int i=a;i<b;i++)
+    {
+        for(int j=2;j<10;j++)
+        {
+            if(i==1)
+            {
+                flag=1;
+            }
+            else
+            {
+                if (i % j == 0 && i != j)
+                {
+                    flag = 1;
+                    break;
+                }
+            }
+        }
+        if(flag==0)
+        {
+            cout<<i<<" is prime"<<endl;
+        }
+        else
+        flag=0;
+    }
+}
